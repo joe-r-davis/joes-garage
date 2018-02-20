@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Joe's Garage</title>
+</head>
+
+<!-- BOOTSTRAP  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+<!-- FONTAWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+<!-- STYLES -->
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+
+    <h1 class="page-title">Joe's Garage</h1>
+    <div id="app">
+        <div class="car-stuff">
+            <form onsubmit="globals.app.controllers.carCtrl.makeCar(event)">
+                <div class="form-group">
+                    <label for="make">Make:</label>
+                    <input type="text" name="make" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model:</label>
+                    <input type="text" name="model" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="text" name="year" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="color">color:</label>
+                    <input type="text" name="color" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="text" name="price" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Add Car</button>
+                    <button type="reset" class="btn btn-danger red">Clear</button>
+                </div>
+            </form>
+            <div id="cars-here"></div>
+        </div>
+
+    </div>
+
+    <!-- EXTERNAL LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+    <!-- SERVICE -->
+    <script src="car-service.js"></script>
+
+    <!-- CONTROLLER -->
+    <script src="car-controller.js"></script>
+
+    <!-- APP -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
